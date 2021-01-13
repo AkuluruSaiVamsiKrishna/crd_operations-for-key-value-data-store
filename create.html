@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Key Value Data Store</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+a
+{
+color:#484848;
+text-decoration: none;
+}
+
+input[type=text],input[type=number], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+}
+
+input[type=submit] {
+  background-color: #909090;
+  color: #f2f2f2;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: center;
+}
+
+input[type=submit]:hover {
+  background-color: #888888;
+}
+
+.container{
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+.col-25 {
+  float: left;
+  width: 25%;
+  margin-top: 6px;
+}
+
+.col-75 {
+  float: left;
+  width: 75%;
+  margin-top: 6px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+@media screen and (max-width: 600px) {
+  .col-25, .col-75, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+}
+</style>
+
+</head>
+<body>
+
+<a href="index.html"><h1 align="center">Key Value Data Store</h1></a>
+<a href="create.html"><h2 align="center">Create</h2></a>
+
+<div class="container">
+  <form action="json.html">
+    <div class="row">
+      <div class="col-25">
+        <label for="fname">Key *</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="key" name="key" placeholder="Enter Key" pattern="[A-Za-z]{1-32}" title="Enter the string(key) max. of 32 characters." required>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="lname">Value *</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="value" name="value" placeholder="Enter Value" pattern="[A-Za-z]{1-16384}" title="Enter the string(value) max. of 16KB." required>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="country">Time-To-Live</label>
+      </div>
+      <div class="col-75">
+        <input type="number" id="time" name="time" placeholder="Enter Time-To-Live in seconds">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-75">
+        <input type="hidden" id="crd" name="crd" value="create">
+      </div>
+    </div>
+    
+    <div class="row" align="center">
+	<br>
+      <input type="submit" value="Submit">
+    </div>
+  </form>
+</div>
+
+</body>
+</html>
