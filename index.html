@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Key Value Data Store</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+a
+{
+color:#484848;
+text-decoration: none;
+}
+
+input[type=submit] {
+  background-color: #909090;
+  color: #f2f2f2;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: center;
+}
+
+input[type=submit]:hover {
+  background-color: #888888;
+}
+
+.container {
+  border-radius: 5px;
+  justify-content: center;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+@media screen and (max-width: 600px) {
+  input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+}
+</style>
+</head>
+<body>
+
+<a href="index.html"><h1 align="center">Key Value Data Store</h1></a>
+
+<div class="container">
+  <form action="create.html">
+    <div class="row" align="center">
+	<br>
+      <input type="submit" value="Create">
+    </div>
+  </form>
+  <form action="read.html">
+    <div class="row" align="center">
+	<br>
+      <input type="submit" value="Read">
+    </div>
+  </form>
+  <form action="delete.html">
+    <div class="row" align="center">
+	<br>
+      <input type="submit" value="Delete">
+    </div>
+  </form>
+</div>
+
+</body>
+</html>
